@@ -1,0 +1,26 @@
+name: Build and Run Game
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_run_game:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Install dependencies
+        run: pip install curses
+
+      - name: Build and Run Game
+        run: |
+          python game.py 
