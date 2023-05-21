@@ -18,9 +18,6 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: Install dependencies
-        run: pip install curses
-
       - name: Build and Run Game
         run: |
           python game.py 
