@@ -1,4 +1,4 @@
-name: txt files check
+name: Text Files Check
 
 on:
   push:
@@ -15,28 +15,23 @@ jobs:
 
       - name: Run txt file check
         run: |
-          python3 - << EOF
-          import os
+          txt_files=$(find . -name "*.txt")
+            
+          for file in $txt_files; do
 
-          def check_txt_files():
-              repo_root = os.environ['GITHUB_WORKSPACE']
-              txt_files = [file for file in os.listdir(repo_root) if file.endswith('.txt')]
-
-              for file in txt_files:
-                  file_path = os.path.join(repo_root, file)
-                  with open(file_path, 'r', encoding='utf-8') as f:
-                      lines = f.readlines()
-                      if len(lines) == 24:
-                          for line in lines:
-                              if len(line.rstrip('\n')) > 59:
-                                  print("::error::Line in file {} exceeds the maximum length of 59 characters.".format(file))
-                                  exit(1)
-                          print("File {} has the correct number of lines and line lengths.".format(file))
-                      else:
-                          print("::error::File {} does not have the correct number of lines.".format(file))
-                          exit(1)
-
-          if __name__ == '__main__':
-              check_txt_files()
-          EOF
-        shell: bash
+            lines=$(cat "$file" | wc -l)
+            
+            if [[ $lines -eq 24 ]]; then
+              while read -r line; do
+                if [[ ${#line} -gt 59 ]]; then
+                  echo "Line in file $file exceeds the maximum length of 59 characters."
+                  exit 1
+                fi
+              done < "$file"
+            
+              echo "File $file has the correct number of lines and line lengths."
+            else
+              echo "File $file does not have the correct number of lines."
+              exit 1
+            fi
+          done
