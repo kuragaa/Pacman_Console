@@ -1,10 +1,12 @@
 import os
 
 def check_txt_files():
-    txt_files = [file for file in os.listdir('.') if file.endswith('.txt')]
+    repo_root = os.environ['GITHUB_WORKSPACE']
+    txt_files = [file for file in os.listdir(repo_root) if file.endswith('.txt')]
 
     for file in txt_files:
-        with open(file, 'r', encoding='utf-8') as f:
+        file_path = os.path.join(repo_root, file)
+        with open(file_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             if len(lines) == 24:
                 for line in lines:
