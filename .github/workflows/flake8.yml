@@ -1,0 +1,27 @@
+name: Flake8 Linter
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  flake8:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+          with:
+            python-version: 3.7
+
+      - name: Install dependencies
+        run: |
+          pip install flake8
+          pip install flake8-bugbear
+
+      - name: Run flake8
+        run: flake8 . --exclude=__init__.py,setup.py --include=**/*.py
