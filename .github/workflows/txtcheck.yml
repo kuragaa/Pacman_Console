@@ -14,27 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run txt file check
-        run: |
-          txt_files=$(find . -name "*.txt")
-
-          for file in $txt_files; do
-
-            lines=$(cat -l -v -e -T -s -- "$file" | tr -d '\n' | wc -m)
-
-            if [[ $lines -eq 24 ]]; then
-              while read -r line; do
-                if [[ ${#line} -gt 59 ]]; then
-                  echo "Line in file $file exceeds the maximum length of 59 characters."
-                  continue
-                fi
-              done < "$file"
-
-              echo "File $file has the correct number of lines and line lengths."
-            else
-              echo "File $file does not have the correct number of lines."
-              continue
-            fi
-          done
+        run: python txtchecks.py
 
 
 
