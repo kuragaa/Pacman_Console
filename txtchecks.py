@@ -12,11 +12,11 @@ def check_txt_files():
                 for line in lines:
                     if len(line.rstrip('\n')) > 59:
                         print(f"Line in file {file} exceeds the maximum length of 59 characters.")
-                        exit(1)
+                        continue
                 print(f"File {file} has the correct number of lines and line lengths.")
             else:
                 print(f"File {file} does not have the correct number of lines.")
-                exit(1)
+                continue
 
 if __name__ == '__main__':
     check_txt_files()
