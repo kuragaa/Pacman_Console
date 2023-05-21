@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: 3.7
 
+      - name: Install Xvfb
+        run: sudo apt-get install xvfb
+
       - name: Build and Run Game
         run: |
-          python game.py 
+          xvfb-run -a python game.py
