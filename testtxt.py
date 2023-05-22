@@ -11,4 +11,3 @@ def test_txt_fiels():
 
             for line in lines:
                 assert len(line.rstrip('\n')) <= 59, f"Line in file {file} exceeds the maximum length of 59 characters."
-                

@@ -1,4 +1,3 @@
-import curses
 import random
 
 
@@ -32,7 +31,6 @@ class Ghosts:
     def set_character(self, position):
         self.disappear()
         self.y, self.x = position
-        direction = "RIGHT"
         self.field.mapa.addch(self.y, self.x, self.symbol, self.color)
 
         self.field.mapa.refresh()

@@ -1,4 +1,3 @@
-import curses
 
 
 class Pacman:
