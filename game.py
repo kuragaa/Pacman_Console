@@ -213,7 +213,7 @@ class PacmanGame:
 
 def main():
     PacmanGame()
-    
+
 
 if __name__ == '__main__':
     main()
