@@ -24,4 +24,5 @@ jobs:
           pip install flake8-bugbear
 
       - name: Run flake8
-        run: flake8 . --exclude=__init__.py,setup.py --include=**/*.py
+        run: flake8 . --exclude=__init__.py,setup.py --include=**/*.py --ignore=__pycache__,wheel\ package .
+        
