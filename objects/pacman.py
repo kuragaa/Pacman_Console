@@ -31,8 +31,8 @@ class Pacman:
             self.x = 1
 
         if (
-            self.field.matrix[self.y][self.x] == "█"
-            or self.field.matrix[self.y][self.x] == "-"
+            self.field.matrix[self.y][self.x] == "█" or 
+            self.field.matrix[self.y][self.x] == "-"
         ):  # если новые координаты - стена, возвращаем первоначальные
             self.y = self.prev_y
             self.x = self.prev_x
