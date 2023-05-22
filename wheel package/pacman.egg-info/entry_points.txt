@@ -1,0 +1,2 @@
+[console_scripts]
+pacman = pacman.game:main

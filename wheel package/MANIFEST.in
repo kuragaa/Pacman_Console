@@ -1,0 +1,6 @@
+include pacman/colorinit.py
+recursive-include pacman/objects *.py
+recursive-include pacman/screens *.txt
+recursive-include pacman/maps *.txt
+include pacman/game.py
+

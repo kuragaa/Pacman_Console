@@ -1,15 +1,16 @@
 import curses
-from objects.pacman import Pacman
-from objects.field import GameField
-from objects.ghosts import Ghosts
-import colorinit
+from .objects.field import GameField
+from .objects.pacman import Pacman
+from .objects.ghosts import Ghosts
+from .color import colorinit
 import time
+import pkg_resources
 
 DATA = {
-    "map_file": "maps/map.txt",
-    "start": "screens/start.txt",
-    "win": "screens/win.txt",
-    "end": "screens/gameover.txt",
+    "map_file": pkg_resources.resource_filename(__name__, "maps/map.txt"),
+    "start": pkg_resources.resource_filename(__name__, "screens/start.txt"),
+    "win": pkg_resources.resource_filename(__name__, "screens/win.txt"),
+    "end": pkg_resources.resource_filename(__name__, "screens/gameover.txt"),
     "character_positions": {
         "pacman": [18, 29],
         "ghosts": [[11, 25], [11, 26], [11, 28], [11, 29]],
