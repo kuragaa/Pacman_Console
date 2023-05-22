@@ -212,7 +212,8 @@ class PacmanGame:
 
 
 def main():
-    game = PacmanGame()
+    PacmanGame()
+    
 
 if __name__ == '__main__':
     main()
