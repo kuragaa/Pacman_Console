@@ -1,6 +1,6 @@
-import pytest
 
 def test_txt_fiels():
+
     txt_files = ['maps/map.txt', 'screens/start.txt', 'screens/win.txt', 'screens/gameover.txt']
 
     for file in txt_files:
@@ -11,3 +11,4 @@ def test_txt_fiels():
 
             for line in lines:
                 assert len(line.rstrip('\n')) <= 59, f"Line in file {file} exceeds the maximum length of 59 characters."
+                

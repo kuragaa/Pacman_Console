@@ -1,5 +1,4 @@
 from objects.ghosts import Ghosts
-import pytest
 
 
 class Field:
