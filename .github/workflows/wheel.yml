@@ -29,7 +29,7 @@ jobs:
           pip install wheel
 
       - name: Check wheel package installation
-        run: pip install wheel\\ package/dist/*.whl 
+        run: pip install wheel\ package/dist/*.whl 
 
       - name: Run wheel
         run: pacman || true
