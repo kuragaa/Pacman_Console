@@ -13,7 +13,7 @@
 
 ![Screen2](https://github.com/kuragaa/Pacman_Console/blob/main/screens/Screen3.jpg)
 
-## Play now!
+## Play now! [![Download](https://img.shields.io/badge/download-game-green.svg)](https://github.com/kuragaa/Pacman_Console/releases/download/v1.0.0/setup.py)
 
 ![Screen3](https://github.com/kuragaa/Pacman_Console/blob/main/screens/Screen2.jpg)
 
