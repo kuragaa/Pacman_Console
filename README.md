@@ -17,10 +17,3 @@
 
 ![Screen3](https://github.com/kuragaa/Pacman_Console/blob/main/screens/Screen2.jpg)
 
-<p align="center">
-    <a href="https://github.com/kuragaa/Pacman_Console/releases/download/v1.0.0/setup.py">
-        <img src="https://img.shields.io/badge/download-game-green.svg" alt="Download">
-    </a>
-</p>
-
-[![Download](https://img.shields.io/badge/download-game-green.svg)](https://github.com/kuragaa/Pacman_Console/releases/download/v1.0.0/setup.py)
