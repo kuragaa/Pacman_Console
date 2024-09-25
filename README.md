@@ -1,5 +1,5 @@
 # Space Scape
----
+
 Elplore the landscapes of distant mysterious planets, fight against constantly arriving UFOs, upgrade your character and have fun! But... beware of the main boss.
 ![Скриншот 1](https://github.com/kuragaa/Pacman_Console/blob/main/screens/win.txt)
 
