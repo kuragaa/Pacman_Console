@@ -1,6 +1,6 @@
 # Space Scape
 
-<b>Elplore</b> the landscapes of distant mysterious planets, fight against constantly arriving UFOs, upgrade your character and have fun! But... beware of the main boss.
+<b>Elplore</b> the landscapes of distant mysterious planets, <b>fight</b> against constantly arriving UFOs, <b>upgrade</b> your character and <b>have fun!</b> But... beware of the main boss.
 
 ![Скриншот 1](https://github.com/kuragaa/Pacman_Console/blob/main/screens/Screen1.jpg)
 
