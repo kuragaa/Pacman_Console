@@ -6,9 +6,9 @@
 
 ## Controls
 
-- **W, A, S, D** — movement
-- **Space** — jump
-- **Left Mouse Button** — shoot
-- **U** — pause / upgrade menu
+- <b>W, A, S, D</b> — movement
+- <b>Space</b> — jump
+- <b>Left Mouse Button</b> — shoot
+- <b>U</b> — pause / upgrade menu
 
 [![Download](https://img.shields.io/badge/download-game-green.svg)](https://github.com/kuragaa/Pacman_Console/releases/download/v1.0.0/setup.py)
